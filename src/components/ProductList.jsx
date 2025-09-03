@@ -7,7 +7,7 @@ const ProductList = ({products}) => {
     <div>
       <div className='product-grid'>
        {products.map((product)=>(
-        <div key={product.id}>
+        <div className="col-12" key={product.id}>
           <img src={product.image} alt={product.name} width="150" />
             <h3>{product.name}</h3>
             <p>₹{product.price}</p>
