@@ -5,9 +5,9 @@ const ProductList = ({products}) => {
   
   return (
     <div>
-      <div className='product-grid'>
+      <div className="col-12">
        {products.map((product)=>(
-        <div className="col-12" key={product.id}>
+        <div  key={product.id}>
           <img src={product.image} alt={product.name} width="150" />
             <h3>{product.name}</h3>
             <p>₹{product.price}</p>
