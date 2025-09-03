@@ -36,7 +36,7 @@ function Admin({ products, setProducts }) {
   };
 
   return (
-    <div>
+    <div >
       <h2>Admin Panel</h2>
 
       {/* Add product form */}
@@ -73,19 +73,19 @@ function Admin({ products, setProducts }) {
       </form>
 
       {/* List of products */}
-      <ul>
+      <div className="col-12">
         {products.map((product) => (
-          <li key={product.id}>
-            {product.name} - ${product.price}
+          <div key={product.id}>
+            <a href={`/admin/product/${product.id}`}>{product.name} - ${product.price}</a>
             <button className="float-right" onClick={() => setEditingProduct(product)}>
               Edit
             </button>
             <button className="float-right" onClick={() => handleDelete(product.id)}>
               Delete
             </button>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
 
       {/* Edit product form */}
       {editingProduct && (
